@@ -118,9 +118,8 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-source ~/.autoenv/activate.sh
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
 
-
+source /opt/ros/jade/setup.bash
