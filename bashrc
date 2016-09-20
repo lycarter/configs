@@ -35,7 +35,7 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-source ~/.git-prompt.sh
+source ~/.bash_prompt.sh
 # set a fancy prompt (non-color, unless we know we "want" color)
 #PS1='\[\e[0;31m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[0;31m\]\$ \[\e[m\]\[\e[0;32m\]'
 
