@@ -8,7 +8,7 @@
 
 dir=~/configs                    # dotfiles directory
 olddir=~/.dotfiles_old             # old dotfiles backup directory
-files="bashrc bash_prompt.sh git-completion.bash git-prompt.sh tmux.conf gitconfig pylintrc"    # list of files/folders to symlink in homedir
+files="bashrc bash_prompt.sh git-completion.bash git-prompt.sh tmux.conf gitconfig pylintrc profile"    # list of files/folders to symlink in homedir
 
 ##########
 
