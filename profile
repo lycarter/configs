@@ -24,3 +24,5 @@ fi
 if [ -d "$HOME/.cabal/bin" ] ; then
     PATH="$HOME/.cabal/bin:$PATH"
 fi
+
+PATH=~/Library/Python/3.6/bin:$PATH

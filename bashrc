@@ -94,6 +94,10 @@ alias la='ls -A'
 alias l='ls -CF'
 alias c='clear'
 alias cd..='cd ..'
+alias gac='git add *.java; git commit'
+
+alias gradlew-hc='./gradlew cleanIdea cleanIdeaWorkspace idea'
+alias gb='./gradlew build'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -123,3 +127,8 @@ fi
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
+
+export GOPATH=/Volumes/git/go
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
