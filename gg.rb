@@ -7,9 +7,9 @@ if ARGV.empty?
 end
  
 if ARGV[0] == "-h"
-  puts "usage: git-status-parse.rb # prints line numbers"
-  puts "usage: git-status-parse.rb comma-separated-line-numbers multi word command"
-  puts "example: git-status-parse.rb 5,7,40-50 git add"
+  puts "usage: gg # prints line numbers"
+  puts "usage: gg comma-separated-line-numbers multi word command"
+  puts "example: gg 5,7,40-50 git add"
   Kernel.exit(1)
 end
  
@@ -50,5 +50,10 @@ else
   command = ARGV.join(' ') + " " + files
   puts command
   puts
-  exec(command)
+  system("bash -ci " + command)
+  #system %(
+  #  source ~/.bash_aliases
+  #  shopt -s expand_aliases
+  #)
+#  exec("shopt -s expand_aliases" + "\n" + "source ~/.bash_aliases" + "\n" + command)
 end
