@@ -1,7 +1,7 @@
 [user]
 	name = Landon Carter
-	email = lcarter1239@gmail.com
-	signingkey = EF2AB6A5D40D498A
+	# email =
+	# signingkey = 
 [core]
 	editor = vim
 [push]
