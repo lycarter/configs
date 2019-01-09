@@ -45,8 +45,8 @@ PS1="\[\e[0;34m\]\t\[\e[0;34m\]-\[\e[0;34m\]\u \[\e[0;33m\]\[\e[0;33m\]\w\[\033[
 #esac
 
 # turn on colors
-CLICOLOR=1
-LSCOLORS=gxfxcxdxbxegedabagacad
+export CLICOLOR=1
+export LSCOLORS=gxfxcxdxbxegedabagacad
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
