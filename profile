@@ -26,3 +26,6 @@ if [ -d "$HOME/.cabal/bin" ] ; then
 fi
 
 PATH=~/Library/Python/3.6/bin:$PATH
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+

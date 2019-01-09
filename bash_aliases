@@ -22,6 +22,9 @@ alias gac='git add *.java; git commit'
 
 alias gradlew-hc='./gradlew cleanIdea cleanIdeaWorkspace idea'
 alias gb='./gradlew build'
+alias gw='./gradlew'
+alias gwtest='./gradlew cJ cTJ checkstyleMain checkstyleTest pmdMain'
+alias checkstyle='./gradlew checkstyleMain checkstyleTest'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert

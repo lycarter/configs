@@ -44,6 +44,9 @@ PS1="\[\e[0;34m\]\t\[\e[0;34m\]-\[\e[0;34m\]\u \[\e[0;33m\]\[\e[0;33m\]\w\[\033[
 #    xterm-color) color_prompt=yes;;
 #esac
 
+# turn on colors
+CLICOLOR=1
+LSCOLOR=gxfxcxdxbxegedabagacad
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
@@ -103,6 +106,10 @@ export GOPATH=/Volumes/git/go
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
+export PATH=$PATH:/Users/lcarter/Library/Python/2.7/bin
+
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home
+export GRADLE_OPTS="-Djavax.net.ssl.trustStore=$(/usr/libexec/java_home)/jre/lib/security/cacerts -Djavax.net.ssl.trustStorePassword=changeit -Djavax.net.ssl.keyStore=$(/usr/libexec/java_home)/jre/lib/security/cacerts -Djavax.net.ssl.keyStorePassword=changeit"
 
 # Uncomment for ruby support
 # export PATH="$HOME/.rbenv/bin:$PATH"
