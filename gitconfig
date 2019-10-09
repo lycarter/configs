@@ -1,7 +1,7 @@
 [user]
 	name = Landon Carter
 	email = lcarter@palantir.com
-	signingkey = 66D33D87E68CBFAA
+	signingkey = 84CDCCEA1F3E14E7400C2A8C9E6E79C6C98319FE
 [core]
 	editor = vim
 [push]

@@ -108,8 +108,8 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 export PATH=$PATH:/Users/lcarter/Library/Python/2.7/bin
 
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home
-export GRADLE_OPTS="-Djavax.net.ssl.trustStore=$(/usr/libexec/java_home)/jre/lib/security/cacerts -Djavax.net.ssl.trustStorePassword=changeit -Djavax.net.ssl.keyStore=$(/usr/libexec/java_home)/jre/lib/security/cacerts -Djavax.net.ssl.keyStorePassword=changeit"
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+export GRADLE_OPTS="-Djavax.net.ssl.trustStore=$(/usr/libexec/java_home -v 1.8)/jre/lib/security/cacerts -Djavax.net.ssl.trustStorePassword=changeit -Djavax.net.ssl.keyStore=$(/usr/libexec/java_home -v 1.8)/jre/lib/security/cacerts -Djavax.net.ssl.keyStorePassword=changeit"
 
 # Uncomment for ruby support
 # export PATH="$HOME/.rbenv/bin:$PATH"
