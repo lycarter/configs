@@ -38,7 +38,7 @@ function is_git_repository {
 }
 
 function is_pgdev {
-  test "$PWD##/vollumes/git/pgdev}" != "$PWD"
+  [[ $PWD/ = /Volumes/git/pgdev/* ]]
 }
 
 # Determine the branch/state information for this git repository.
@@ -108,12 +108,15 @@ function set_bash_prompt () {
 
   # Set the PYTHON_VIRTUALENV variable.
   set_virtualenv
-
   # Set the BRANCH variable.
-  if is_git_repository && !is_pgdev ; then
+  if is_git_repository && ! is_pgdev ; then
     set_git_branch
   else
-    BRANCH=''
+    if is_pgdev ; then
+      BRANCH="(pgdev)"
+    else
+      BRANCH=''
+    fi
   fi
 
   # Set the bash prompt variable.
