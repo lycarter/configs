@@ -37,6 +37,10 @@ function is_git_repository {
   git branch > /dev/null 2>&1
 }
 
+function is_pgdev {
+  test "$PWD##/vollumes/git/pgdev}" != "$PWD"
+}
+
 # Determine the branch/state information for this git repository.
 function set_git_branch {
   # Capture the output of the "git status" command.
@@ -52,7 +56,7 @@ function set_git_branch {
   fi
 
   # Set arrow icon based on status against remote.
-  remote_pattern="# Your branch is (ahead|behind)+ "
+  remote_pattern="Your branch is (ahead|behind)+ "
   if [[ ${git_status} =~ ${remote_pattern} ]]; then
     if [[ ${BASH_REMATCH[1]} == "ahead" ]]; then
       remote="↑"
@@ -74,7 +78,7 @@ function set_git_branch {
   fi
 
   # Set the final branch string.
-  BRANCH="${state}(${branch})${remote}${COLOR_NONE} "
+  BRANCH="${state}(${branch})${remote}${COLOR_NONE}"
 }
 
 # Return the prompt symbol to use, colorized based on the return value of the
@@ -106,7 +110,7 @@ function set_bash_prompt () {
   set_virtualenv
 
   # Set the BRANCH variable.
-  if is_git_repository ; then
+  if is_git_repository && !is_pgdev ; then
     set_git_branch
   else
     BRANCH=''

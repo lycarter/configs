@@ -39,7 +39,8 @@ source ~/.bash_prompt.sh
 # set a fancy prompt (non-color, unless we know we "want" color)
 #PS1='\[\e[0;31m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[0;31m\]\$ \[\e[m\]\[\e[0;32m\]'
 
-PS1="\[\e[0;34m\]\t\[\e[0;34m\]-\[\e[0;34m\]\u \[\e[0;33m\]\[\e[0;33m\]\w\[\033[m\]\[\e[1;35m\]\$(__git_ps1)\[\e[0;37m\]\$ "
+## overridden by bash_prompt.sh
+# PS1="\[\e[0;34m\]\t\[\e[0;34m\]-\[\e[0;34m\]\u \[\e[0;33m\]\[\e[0;33m\]\w\[\033[m\]\[\e[1;35m\]\$(__git_ps1)\[\e[0;37m\]\$ "
 #case "$TERM" in
 #    xterm-color) color_prompt=yes;;
 #esac
