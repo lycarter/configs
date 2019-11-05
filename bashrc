@@ -108,6 +108,7 @@ export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 export PATH=$PATH:/Users/lcarter/Library/Python/2.7/bin
+export PATH=$PATH:/usr/local/sbin
 
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 export GRADLE_OPTS="-Djavax.net.ssl.trustStore=$(/usr/libexec/java_home -v 1.8)/jre/lib/security/cacerts -Djavax.net.ssl.trustStorePassword=changeit -Djavax.net.ssl.keyStore=$(/usr/libexec/java_home -v 1.8)/jre/lib/security/cacerts -Djavax.net.ssl.keyStorePassword=changeit"
