@@ -26,7 +26,7 @@ alias gw='./gradlew'
 alias gwforward='./gradlew cJ cTJ checkstyleMain checkstyleTest'
 alias checkstyle='./gradlew checkstyleMain checkstyleTest'
 alias gwtest='./gradlew cJ cTJ check test'
-alias pgdev='./gradlew format && git add --all && git commit --amend && git push origin HEAD:refs/for/develop'
+alias pgdev='./gradlew format && git add --all && git commit --amend --no-edit && git push origin HEAD:refs/for/develop'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
