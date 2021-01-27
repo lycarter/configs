@@ -26,3 +26,12 @@ if [ -d "$HOME/.cabal/bin" ] ; then
 fi
 
 PATH=~/Library/Python/3.6/bin:$PATH
+
+##
+# Your previous /Users/lcarter/.profile file was backed up as /Users/lcarter/.profile.macports-saved_2019-10-19_at_07:59:49
+##
+
+# MacPorts Installer addition on 2019-10-19_at_07:59:49: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
+

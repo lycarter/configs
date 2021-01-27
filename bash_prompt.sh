@@ -38,7 +38,7 @@ function is_git_repository {
 }
 
 function is_pgdev {
-  [[ $PWD/ = /Volumes/git/pgdev/* ]]
+  [[ $PWD/ = /Volumes/git/pgdev/* || $PWD/ = /Volumes/git/pgdev-2/* ]]
 }
 
 # Determine the branch/state information for this git repository.

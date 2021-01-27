@@ -118,3 +118,8 @@ export GRADLE_OPTS="-Djavax.net.ssl.trustStore=$(/usr/libexec/java_home -v 1.8)/
 # eval "$(rbenv init -)"
 
 export GPG_TTY=$(tty)
+
+export NODE_EXTRA_CA_CERTS=~/Downloads/ca-bundle.crt
+
+# The next line updates PATH for Netlify's Git Credential Helper.
+if [ -f '/Users/lcarter/.netlify/helper/path.bash.inc' ]; then source '/Users/lcarter/.netlify/helper/path.bash.inc'; fi
