@@ -38,7 +38,7 @@ function is_git_repository {
 }
 
 function is_pgdev {
-  [[ $PWD/ = /Volumes/git/pgdev/* || $PWD/ = /Volumes/git/pgdev-2/* ]]
+  [[ $PWD/ = /Volumes/git/pgdev/* || $PWD/ = /Volumes/git/pgdev-2/* || $PWD/ = /Volumes/git/gotham-core/* ]]
 }
 
 # Determine the branch/state information for this git repository.
@@ -81,6 +81,12 @@ function set_git_branch {
   BRANCH="${state}(${branch})${remote}${COLOR_NONE}"
 }
 
+function set_git_branch_cheap {
+  branch=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD)
+  BRANCH="(${branch})${COLOR_NONE}"
+}
+
+
 # Return the prompt symbol to use, colorized based on the return value of the
 # previous command.
 function set_prompt_symbol () {
@@ -113,7 +119,7 @@ function set_bash_prompt () {
     set_git_branch
   else
     if is_pgdev ; then
-      BRANCH="(pgdev)"
+      set_git_branch_cheap
     else
       BRANCH=''
     fi

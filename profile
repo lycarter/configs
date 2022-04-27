@@ -35,3 +35,8 @@ PATH=~/Library/Python/3.6/bin:$PATH
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
 
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
+export JAVA_HOME=$(/usr/libexec/java_home)
+export GRADLE_OPTS="-Djavax.net.ssl.trustStore=$(/usr/libexec/java_home)/lib/security/cacerts -Djavax.net.ssl.trustStorePassword=changeit -Djavax.net.ssl.keyStore=$(/usr/libexec/java_home)/lib/security/cacerts -Djavax.net.ssl.keyStorePassword=changeit"

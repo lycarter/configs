@@ -110,9 +110,6 @@ export PATH=$PATH:$GOROOT/bin
 export PATH=$PATH:/Users/lcarter/Library/Python/2.7/bin
 export PATH=$PATH:/usr/local/sbin
 
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-export GRADLE_OPTS="-Djavax.net.ssl.trustStore=$(/usr/libexec/java_home -v 1.8)/jre/lib/security/cacerts -Djavax.net.ssl.trustStorePassword=changeit -Djavax.net.ssl.keyStore=$(/usr/libexec/java_home -v 1.8)/jre/lib/security/cacerts -Djavax.net.ssl.keyStorePassword=changeit"
-
 # Uncomment for ruby support
 # export PATH="$HOME/.rbenv/bin:$PATH"
 # eval "$(rbenv init -)"
@@ -123,3 +120,8 @@ export NODE_EXTRA_CA_CERTS=~/Downloads/ca-bundle.crt
 
 # The next line updates PATH for Netlify's Git Credential Helper.
 if [ -f '/Users/lcarter/.netlify/helper/path.bash.inc' ]; then source '/Users/lcarter/.netlify/helper/path.bash.inc'; fi
+
+# https://github.palantir.build/deployability/kubectl-scripts
+if [[ -f $GOPATH/src/github.palantir.build/deployability/kubectl-scripts/bash.sh ]]; then
+    source $GOPATH/src/github.palantir.build/deployability/kubectl-scripts/bash.sh
+fi
