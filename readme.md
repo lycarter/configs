@@ -10,10 +10,14 @@ Github + gopass setup
 1. `cd configs && ./makesymlinks.sh` -> restart iterm
 
 Laptop setup
-1. install Spectacle (https://www.spectacleapp.com/)
+1. Install Spectacle (https://www.spectacleapp.com/)
+1. For iterm2, go to preferences -> profiles -> keys -> key mappings and choose the "natural text editing" preset
+1. Install vscode
+1. Add `code` command https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line
 
 Dev environment setup
 1. `brew install jenv` -> reopen shell -> ensure `jenv doctor` is happy enough
 1. `brew tap homebrew/cask-versions`
 1. `brew install zulu11 zulu15 zulu17`
-1. `for i in /Library/Java/JavaVirtualMachines/*.jdk; do     jenv add "$i/Contents/Home"; done`
+1. `for i in /Library/Java/JavaVirtualMachines/*.jdk; do jenv add "$i/Contents/Home"; done`
+1. Add existing gpg signatures from Yubikey (`<internal github>/<information security>/yubikey-provisioning/blob/master/MacOS/import-existing-key.sh`)

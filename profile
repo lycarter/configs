@@ -35,6 +35,7 @@ PATH=~/Library/Python/3.6/bin:$PATH
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
 
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 
 # export PATH="$HOME/.jenv/bin:$PATH"
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
