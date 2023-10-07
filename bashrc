@@ -104,15 +104,15 @@ if [ -f ~/.git-completion.bash ]; then
 fi
 
 export GOPATH=/Volumes/git/go
-export GOROOT=/usr/local/opt/go/libexec
+export GOROOT=/usr/local/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
-export PATH=$PATH:/Users/lcarter/Library/Python/2.7/bin
+export PATH=$PATH:/Users/lcarter/Library/Python/3.8/bin
 export PATH=$PATH:/usr/local/sbin
 
 # Uncomment for ruby support
-# export PATH="$HOME/.rbenv/bin:$PATH"
-# eval "$(rbenv init -)"
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 
 export GPG_TTY=$(tty)
 
@@ -125,3 +125,12 @@ if [ -f '/Users/lcarter/.netlify/helper/path.bash.inc' ]; then source '/Users/lc
 if [[ -f $GOPATH/src/github.palantir.build/deployability/kubectl-scripts/bash.sh ]]; then
     source $GOPATH/src/github.palantir.build/deployability/kubectl-scripts/bash.sh
 fi
+# The next line updates PATH for Netlify's Git Credential Helper.
+test -f '/Users/lcarter/Library/Preferences/netlify/helper/path.bash.inc' && source '/Users/lcarter/Library/Preferences/netlify/helper/path.bash.inc'
+
+# https://github.com/android-password-store/Android-Password-Store/issues/173#issuecomment-453686599
+# https://github.com/lycarter/pass/commit/6ec5c8149875dbf65b1db8f48ae44d72520c7383
+export PASSWORD_STORE_GPG_OPTS='--no-throw-keyids'
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

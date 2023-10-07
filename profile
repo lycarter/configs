@@ -40,5 +40,7 @@ export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 # export PATH="$HOME/.jenv/bin:$PATH"
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 
+if which direnv > /dev/null; then eval "$(direnv hook bash)"; fi
+
 # export JAVA_HOME=$(/usr/libexec/java_home)
 # export GRADLE_OPTS="-Djavax.net.ssl.trustStore=$(/usr/libexec/java_home)/lib/security/cacerts -Djavax.net.ssl.trustStorePassword=changeit -Djavax.net.ssl.keyStore=$(/usr/libexec/java_home)/lib/security/cacerts -Djavax.net.ssl.keyStorePassword=changeit"
