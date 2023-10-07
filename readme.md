@@ -1,7 +1,7 @@
 Github + gopass setup
 
 1. log in to normal github using 2fa
-1. Transfer GPG key from old laptop: https://makandracards.com/makandra-orga/37763-gpg-extract-private-key-and-import-on-different-machine
+1. Transfer GPG key from old laptop: https://makandracards.com/makandra-orga/37763-gpg-extract-private-key-and-import-on-different-machine (using encrypted email)
 1. Set GPG key to ultimate trust (https://security.stackexchange.com/questions/129474/how-to-raise-a-key-to-ultimate-trust-on-another-machine)
 1. Generate a new SSH key and add it to Github: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent as well as to people app
 1. `brew install gopass`
@@ -14,6 +14,7 @@ Laptop setup
 1. For iterm2, go to preferences -> profiles -> keys -> key mappings and choose the "natural text editing" preset
 1. Install vscode
 1. Add `code` command https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line
+1. Add `idea` command https://blog.jetbrains.com/blog/2018/08/23/toolbox-app-1-11-whats-new/
 
 Dev environment setup
 1. `brew install jenv` -> reopen shell -> ensure `jenv doctor` is happy enough

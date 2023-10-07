@@ -109,6 +109,7 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 export PATH=$PATH:/Users/lcarter/Library/Python/3.8/bin
 export PATH=$PATH:/usr/local/sbin
+export PATH=$PATH:"/Users/lcarter/Library/Application Support/JetBrains/Toolbox/scripts"
 
 # Uncomment for ruby support
 export PATH="$HOME/.rbenv/bin:$PATH"
