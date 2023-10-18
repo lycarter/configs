@@ -13,6 +13,18 @@ if [ -x /usr/bin/dircolors ]; then
     alias diff='diff --color=auto'
 fi
 
+function is_pgdev {
+  [[ $PWD/ = /Volumes/git/pgdev/* || $PWD/ = /Volumes/git/pgdev-2/* || $PWD/ = /Volumes/git/gotham-core/* ]]
+}
+
+newBrFn() {
+    if is_pgdev ; then
+        git fetch && git co origin/develop-cached && git co -b "$@"
+    else
+        git fetch && git co origin/develop && git co -b "$@"
+    fi
+}
+
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
@@ -21,7 +33,7 @@ alias c='clear'
 alias cd..='cd ..'
 alias gac='git add --all && git commit'
 alias gacc='gac && ./tools/pre-push-check.sh && git add --all && git commit --amend --no-edit'
-alias newBr='git fetch && git co origin/develop && git co -b'
+alias newBr=newBrFn
 
 alias gw='./gradlew'
 alias gradlew-hc='gw cleanIdea cleanIdeaWorkspace idea'

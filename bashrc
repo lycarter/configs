@@ -117,7 +117,7 @@ eval "$(rbenv init -)"
 
 export GPG_TTY=$(tty)
 
-export NODE_EXTRA_CA_CERTS=~/Downloads/ca-bundle.crt
+export NODE_EXTRA_CA_CERTS=/Users/lcarter/Downloads/PalantirThirdGenRootCA-selfsign.pem
 
 # The next line updates PATH for Netlify's Git Credential Helper.
 if [ -f '/Users/lcarter/.netlify/helper/path.bash.inc' ]; then source '/Users/lcarter/.netlify/helper/path.bash.inc'; fi
